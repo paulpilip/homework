@@ -1,0 +1,20 @@
+#include <iostream>
+
+void search_max(int int_max = 0) {
+    while (int_max + 1 > int_max) {
+        ++int_max;
+    }
+    std::cout << "Max int = " << int_max << std::endl;
+}
+
+void search_min(int int_min = 0) {
+    while (int_min - 1 < int_min) {
+        --int_min;
+    }
+    std::cout << "Min int = " << int_min << std::endl;
+}
+
+int main() {
+    search_max();
+    search_min();
+}
