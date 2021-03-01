@@ -1,0 +1,27 @@
+#include <iostream>
+
+int main() {
+    std::cout << "Enter the number: ";
+    int N;
+    std::cin >> N;
+
+    std::cout << "Enter number system: ";
+    int M;
+    std::cin >> M;
+
+    int M_modified{0};
+    int mul{1};
+
+    int size = sizeof(N) * 8;
+
+    for (int i = 0; i < size; i++) {
+        int residue = N % M;
+        N = N / M;
+
+        M_modified = M_modified + residue * mul;
+        mul = mul * 10;
+    }
+
+    std::cout << M_modified << std::endl;
+    return 0;
+}
